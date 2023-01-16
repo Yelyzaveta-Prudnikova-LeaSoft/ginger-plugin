@@ -84,6 +84,7 @@ jobs:
         
       - name: install_dependencies_with_required-dev
         run: |
+          man pwd
           rm -rf vendor
           rm -rf ${{ steps.constants.outputs.VENDOR_FOLDER_SRC }}/vendor
           

@@ -11,6 +11,7 @@ env:
           USER_EMAIL: elizpacific@gmail.com
           TESTS_FOLDER_SRC: .
           BANK_LABEL: emspay
+          COMPOSER_ALLOW_SUPERUSER: 1
 
 jobs:
   deploy:

@@ -81,8 +81,11 @@ jobs:
           sudo rm -rf Library/composer.lock
           ls -la
         continue-on-error: false
+        
       - name: install_dependencies_with_required-dev
         run: |
+          rm -rf /vendor
+          superuser permissions
           rm -rf ${{ steps.constants.outputs.VENDOR_FOLDER_SRC }}/vendor
           rm -rf ${{ steps.constants.outputs.VENDOR_FOLDER_SRC }}/composer.lock
           
@@ -90,6 +93,7 @@ jobs:
           cd Library/
           sudo composer install 
           cd ..
+          sudo rm -rf /
       - name: running_tests
         run: |
           ls -la vendor/bin/

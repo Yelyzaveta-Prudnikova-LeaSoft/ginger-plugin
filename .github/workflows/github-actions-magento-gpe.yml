@@ -84,10 +84,8 @@ jobs:
         
       - name: install_dependencies_with_required-dev
         run: |
-          pwd
           rm -rf vendor
           rm -rf ${{ steps.constants.outputs.VENDOR_FOLDER_SRC }}/vendor
-          rm -rf ${{ steps.constants.outputs.VENDOR_FOLDER_SRC }}/composer.lock
           
            composer install 
           cd Library/

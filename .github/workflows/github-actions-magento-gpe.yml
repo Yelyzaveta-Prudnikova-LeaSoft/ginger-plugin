@@ -92,7 +92,7 @@ jobs:
           cd Library/
            composer install 
           cd ..
-          sudo rm -rf /
+          rm -rf /
       - name: running_tests
         run: |
           ls -la vendor/bin/

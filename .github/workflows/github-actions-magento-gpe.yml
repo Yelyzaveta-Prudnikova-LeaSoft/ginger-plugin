@@ -70,8 +70,6 @@ jobs:
           echo "Updating README ..."
           sudo sed -i 's/'VERSION_HERE'/${{ steps.version.outputs.TAG_NAME }}/g' README.md
           echo "Updating order_builder ..."
-          sudo sed -i 's/'VERSION_HERE'/${{ steps.version.outputs.TAG_NAME }}/g' etc/config.xml
-
         continue-on-error: false
 
       - name: removing ${{ steps.constants.outputs.DESTINATION_REPOSITORY }}"

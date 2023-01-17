@@ -10,7 +10,7 @@
         "MIT"
     ],
     "require-dev": {
-        "../../../../vendor/phpunit": "^9.3.7"
+        "/vendor/phpunit": "^9.3.7"
     },
     "autoload": {
         "files": [

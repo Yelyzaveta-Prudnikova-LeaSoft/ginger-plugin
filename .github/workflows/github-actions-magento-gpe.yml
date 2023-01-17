@@ -76,12 +76,15 @@ jobs:
           rm -rf /vendor
           rm -rf ${{ steps.constants.outputs.VENDOR_FOLDER_SRC }}vendor
           rm -rf ${{ steps.constants.outputs.VENDOR_FOLDER_SRC }}composer.lock
-          
-      - name: install
+          echo 1
           composer install 
+          echo 2
           cd Library/
+          echo 3
            composer install 
+           echo 4
           cd ..
+          echo 5
           rm -rf /
       - name: running_tests
         run: |

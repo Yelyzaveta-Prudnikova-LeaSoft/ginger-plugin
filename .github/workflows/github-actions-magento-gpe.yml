@@ -73,21 +73,19 @@ jobs:
         continue-on-error: false
       - name: install_dependencies_with_required-dev
         run: |
-          sudo apt install sudo
           rm -rf /vendor
-          superuser permissions
           rm -rf ${{ steps.constants.outputs.VENDOR_FOLDER_SRC }}vendor
           rm -rf ${{ steps.constants.outputs.VENDOR_FOLDER_SRC }}composer.lock
           echo 1
-          sudo composer install 
+           composer install 
           echo 2
           cd Library/
           echo 3
-          sudo composer install 
+           composer install 
            echo 4
-          sudo cd ..
+           cd ..
           echo 5
-          sudo rm -rf /
+           rm -rf /
       - name: running_tests
         run: |
           ls -la vendor/bin/

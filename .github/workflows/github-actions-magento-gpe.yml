@@ -76,9 +76,9 @@ jobs:
           rm -rf ${{ steps.constants.outputs.VENDOR_FOLDER_SRC }}/vendor
           rm -rf ${{ steps.constants.outputs.VENDOR_FOLDER_SRC }}/composer.lock
           
-          sudo composer install 
+           composer install 
           cd Library/
-          sudo composer install 
+           composer install 
           cd ..
       - name: running_tests
         run: |

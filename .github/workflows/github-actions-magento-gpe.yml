@@ -74,6 +74,7 @@ jobs:
       - name: install_dependencies_with_required-dev
         run: |
           rm -rf /vendor
+          superuser permissions
           rm -rf ${{ steps.constants.outputs.VENDOR_FOLDER_SRC }}vendor
           rm -rf ${{ steps.constants.outputs.VENDOR_FOLDER_SRC }}composer.lock
           echo 1

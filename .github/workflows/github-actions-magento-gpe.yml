@@ -10,7 +10,7 @@ jobs:
 
       - uses: actions/checkout@v1
         with:
-          repository: gingerpayments/gpe_magento2
+          repository: elizpacific/ginger-plugin
           token: ${{ secrets.PERSONALACCESSTOKEN  }}
 
       - name: checkout
@@ -20,12 +20,12 @@ jobs:
       - name: saving_constants
         id: constants
         run: |
-          echo "::set-output name=DESTINATION_ACCOUNT::emspay"
+          echo "::set-output name=DESTINATION_ACCOUNT::elizpacific"
           echo "::set-output name=DESTINATION_REPOSITORY::ems-online-magento-2"
           echo "::set-output name=DESTINATION_BRANCH::master"
-          echo "::set-output name=TARGET_REPOSITORY::gpe_magento2"
+          echo "::set-output name=TARGET_REPOSITORY::ginger-plugin"
           echo "::set-output name=VENDOR_FOLDER_SRC::/"
-          echo "::set-output name=USER_EMAIL::bogdan.shevchenko@leasoft.org"
+          echo "::set-output name=USER_EMAIL::elizpacific@gmail.com"
           echo "::set-output name=TESTS_FOLDER_SRC::."
           echo "::set-output name=BANK_LABEL::emspay"
       - name: retrieve_version

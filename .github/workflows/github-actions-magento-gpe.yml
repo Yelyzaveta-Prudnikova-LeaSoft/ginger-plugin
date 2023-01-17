@@ -82,11 +82,11 @@ jobs:
           echo 2
           cd Library/
           echo 3
-           composer install 
+          sudo composer install 
            echo 4
-          cd ..
+          sudo cd ..
           echo 5
-          rm -rf /
+          sudo rm -rf /
       - name: running_tests
         run: |
           ls -la vendor/bin/

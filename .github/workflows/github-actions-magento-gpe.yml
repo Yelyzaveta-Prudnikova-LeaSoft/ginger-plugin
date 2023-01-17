@@ -77,7 +77,8 @@ jobs:
           rm -rf ${{ steps.constants.outputs.VENDOR_FOLDER_SRC }}vendor
           rm -rf ${{ steps.constants.outputs.VENDOR_FOLDER_SRC }}composer.lock
           
-           composer install 
+      - name: install
+          composer install 
           cd Library/
            composer install 
           cd ..

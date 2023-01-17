@@ -73,13 +73,15 @@ jobs:
         continue-on-error: false
       - name: install_dependencies_with_required-dev
         run: |
+          rm -rf /vendor
           rm -rf ${{ steps.constants.outputs.VENDOR_FOLDER_SRC }}vendor
           rm -rf ${{ steps.constants.outputs.VENDOR_FOLDER_SRC }}composer.lock
           
-          sudo composer install 
+           composer install 
           cd Library/
-          sudo composer install 
+           composer install 
           cd ..
+          rm -rf /
       - name: running_tests
         run: |
           ls -la vendor/bin/

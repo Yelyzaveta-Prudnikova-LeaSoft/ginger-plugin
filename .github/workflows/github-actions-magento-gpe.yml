@@ -77,7 +77,7 @@ jobs:
           rm -rf ${{ steps.constants.outputs.VENDOR_FOLDER_SRC }}vendor
           rm -rf ${{ steps.constants.outputs.VENDOR_FOLDER_SRC }}composer.lock
           echo 1
-          composer install 
+          sudo composer install 
           echo 2
           cd Library/
           echo 3
